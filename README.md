@@ -1,4 +1,4 @@
-# scripts
+# Bash Script to discover the Database of a WordPress website.
 Scripts to help out sorting what is the database connected to the site in all directories for WordPress websites
 
 This script will search inside your public_html and also adjacent folders and check if your site has WordPress, then it will print out the database name.
