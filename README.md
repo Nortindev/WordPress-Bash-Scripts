@@ -1,10 +1,58 @@
-# Bash Script to discover the Database of a WordPress website.
-Scripts to help out sorting what is the database connected to the site in all directories for WordPress websites
 
-This script will search inside your public_html and also adjacent folders and check if your site has WordPress, then it will print out the database name.
+# WordPress Database Discovery Script
 
-It can also check for all subdomains databases and print out which is the database connected to them, as long as the subdomains have WordPress CMS installed.
+## Overview
+This bash script is designed to help identify the database names associated with WordPress websites. It can search through main domains and subdomains, making it especially useful for managing multiple WordPress installations.
 
-This Script is useful to quickly retrieving the databases of multiple subdomains, in cases of client's with over 50-100 databases, and sorting out which is the database connected to each site.
+## Features
+- **Main Domains**: Searches through main domain directories and identifies the connected database for each WordPress installation.
+- **Subdomains**: Searches through subdomain directories under a specified main domain and identifies the connected database for each WordPress installation.
 
-It can also help when performing migrations from backups, to quickly recognize each database attached to each site.
+## Usage
+1. **Download the Script**:
+   ```bash
+   curl -O https://github.com/Nortindev/wordpress-database-scan/raw/main/scriptfinal.sh
+   ```
+
+2. **Make the Script Executable**:
+   ```bash
+   chmod +x scriptfinal.sh
+   ```
+
+3. **Run the Script**:
+   ```bash
+   bash scriptfinal.sh
+   ```
+
+4. **Follow the On-Screen Instructions**:
+   - **Option 1**: Check databases for main domains.
+   - **Option 2**: Check databases for subdomains under a specified main domain.
+
+## Example
+1. Download the script:
+   ```bash
+   curl -O https://github.com/Nortindev/wordpress-database-scan/raw/main/scriptfinal.sh
+   ```
+
+2. Make the script executable:
+   ```bash
+   chmod +x scriptfinal.sh
+   ```
+
+3. Run the script:
+   ```bash
+   bash scriptfinal.sh
+   ```
+
+4. Select an option when prompted:
+   - To check main domains, enter `1`.
+   - To check subdomains, enter `2` and provide the main domain name when prompted.
+
+## Notes
+- Ensure you have the necessary permissions and access to the WordPress directories and databases.
+- The script looks for `wp-config.php` files to identify the database names.
+
+
+## Contact
+For any questions or support, please open an issue on the GitHub repository.
+
